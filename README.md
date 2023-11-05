@@ -116,34 +116,6 @@ end
 
 By Diego Santos, fullstack developer with ruby on Rails.
 @Sandotech.
-# ## Usage
-#
-# Once the Banfilm application is up and running, you can perform various operations related to movies and actors:
-#
-# - Create a new movie:
-#   - Access the "New Movie" page.
-#   - Fill in the movie details, such as title and release date.
-#   - Submit the form to create the movie.
-#
-# - Create a new actor:
-#   - Access the "New Actor" page.
-#   - Enter the actor's name and birth date.
-#   - Submit the form to create the actor.
-#
-# - Associate actors with movies:
-#   - Access the page of a specific movie.
-#   - Click on the "Add Actor" button.
-#   - Select an existing actor from the dropdown or create a new actor.
-#   - Save the association to link the actor with the movie.
-#
-# - View movie details:
-#   - Access the page of a specific movie to see its details, including associated actors.
-#
-# - View actor details:
-#   - Access the page of a specific actor to see their details, including associated movies.
-#
-# - Search for movies or actors:
-#   - Utilize the search functionality to find specific movies or actors based on title, name, or other criteria.
 
 ## Conclusion
 
