@@ -127,9 +127,10 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-x86-linux)
       racc (~> 1.4)
+    passenger (6.0.18)
+      rack
+      rake (>= 0.8.1)
     public_suffix (5.0.3)
-    puma (5.6.7)
-      nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.8)
     rack-test (2.1.0)
@@ -212,7 +213,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  puma (~> 5.0)
+  passenger
   rails (~> 7.0.8)
   selenium-webdriver
   sprockets-rails
