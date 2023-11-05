@@ -2,6 +2,8 @@
 
 Banfilm is a Ruby on Rails application that serves as a library for movies and actors. In this application, movies and actors are modeled as separate entities, and there is a many-to-many relationship established between them using a through table called "part."
 
+![Banfilm_Screenshot_1](https://i.ibb.co/sHJ5tFZ/Firefox-Screenshot-2023-10-22-T15-09-43-015-Z.png)
+
 ## Prerequisites
 
 Before getting started with Banfilm, make sure you have the following prerequisites installed on your system:
@@ -46,6 +48,8 @@ To set up the Banfilm application on your local machine, follow these steps:
    ```
 
 6. Open your web browser and access the application at `http://localhost:3000`.
+
+![Banfilm_Screenshot_2](https://i.ibb.co/Yh7vNQX/Firefox-Screenshot-2023-11-05-T20-14-26-843-Z.png)
 
 ## Models and Associations
 
@@ -111,6 +115,8 @@ end
 
 - `belongs_to :actor`: Specifies that a part belongs to an actor.
 - `belongs_to :movie`: Specifies that a part belongs to a movie.
+
+![Banfilm_Screenshot_3](https://i.ibb.co/9bn8MK8/Firefox-Screenshot-2023-11-05-T20-15-28-241-Z.png)
 
 ## Author
 
