@@ -1,24 +1,156 @@
-# README
+Sure! Here's the README.md content in markdown format:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+# Banfilm - Movie and Actor Library
 
-Things you may want to cover:
+Banfilm is a Ruby on Rails application that serves as a library for movies and actors. In this application, movies and actors are modeled as separate entities, and there is a many-to-many relationship established between them using a through table called "part."
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+Before getting started with Banfilm, make sure you have the following prerequisites installed on your system:
 
-* Configuration
+- ruby (version 3.1.2)
+- rails (version 7.0.8)
+- sqlite3 (version 1.4)
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To set up the Banfilm application on your local machine, follow these steps:
 
-* How to run the test suite
+1. Clone the Banfilm repository from GitHub:
 
-* Services (job queues, cache servers, search engines, etc.)
+   ```bash
+   git clone https://github.com/your-username/banfilm.git
+   ```
 
-* Deployment instructions
+2. Navigate to the project directory:
 
-* ...
+   ````bash
+   cd banfilm
+   ```
+
+3. Install the required dependencies:
+
+   ````bash
+   bundle install
+   ```
+
+4. Create the PostgreSQL database and run the migrations:
+
+   ````bash
+   rails db:create
+   rails db:migrate
+   ```
+
+5. Start the Rails server:
+
+   ````bash
+   rails server
+   ```
+
+6. Open your web browser and access the application at `http://localhost:3000`.
+
+## Models and Associations
+
+Banfilm has two main models: `Movie` and `Actor`.
+
+### Movie Model
+
+The `Movie` model represents a movie in the library. It has the following attributes:
+
+- `title` (string): The title of the movie.
+- `release_year` (date): The release date of the movie.
+- `plot` (string): short description about the movie.
+- `image` (string): URL to a image of the movie.
+
+The `Movie` model has the following associations:
+
+```ruby
+class Movie < ApplicationRecord
+  has_many :parts
+  has_many :actors, through: :parts
+end
+```
+
+- `has_many :parts`: Specifies that a movie can have multiple parts (actor-movie relationships).
+- `has_many :actors, through: :parts`: Establishes a many-to-many relationship between movies and actors through the `parts` table.
+
+### Actor Model
+
+The `Actor` model represents an actor in the library. It has the following attributes:
+
+- `first_name` (string): The first name of the actor.
+- `last_name` (string): The last name of the actor.
+- `image` (string): URL image of the actor.
+- `bio` (string): short description about the actor.
+
+The `Actor` model has the following associations:
+
+```ruby
+class Actor < ApplicationRecord
+  has_many :parts
+  has_many :movies, through: :parts
+end
+```
+
+- `has_many :parts`: Specifies that an actor can have multiple parts (actor-movie relationships).
+- `has_many :movies, through: :parts`: Establishes a many-to-many relationship between actors and movies through the `parts` table.
+
+### Part Model
+
+The `Part` model represents the through table for the many-to-many relationship between movies and actors. It has the following attributes:
+
+- `actor_id` (integer): The ID of the actor.
+- `movie_id` (integer): The ID of the movie.
+
+The `Part` model has the following associations:
+
+```ruby
+class Part < ApplicationRecord
+  belongs_to :actor
+  belongs_to :movie
+end
+```
+
+- `belongs_to :actor`: Specifies that a part belongs to an actor.
+- `belongs_to :movie`: Specifies that a part belongs to a movie.
+
+## Author
+
+By Diego Santos, fullstack developer with ruby on Rails.
+@Sandotech.
+# ## Usage
+#
+# Once the Banfilm application is up and running, you can perform various operations related to movies and actors:
+#
+# - Create a new movie:
+#   - Access the "New Movie" page.
+#   - Fill in the movie details, such as title and release date.
+#   - Submit the form to create the movie.
+#
+# - Create a new actor:
+#   - Access the "New Actor" page.
+#   - Enter the actor's name and birth date.
+#   - Submit the form to create the actor.
+#
+# - Associate actors with movies:
+#   - Access the page of a specific movie.
+#   - Click on the "Add Actor" button.
+#   - Select an existing actor from the dropdown or create a new actor.
+#   - Save the association to link the actor with the movie.
+#
+# - View movie details:
+#   - Access the page of a specific movie to see its details, including associated actors.
+#
+# - View actor details:
+#   - Access the page of a specific actor to see their details, including associated movies.
+#
+# - Search for movies or actors:
+#   - Utilize the search functionality to find specific movies or actors based on title, name, or other criteria.
+
+## Conclusion
+
+Congratulations! You now have a basic understanding of Banfilm, a movie and actor library built with Ruby on Rails. The application allows you to create movies and actors, associate actors with movies, and view detailed information about movies and actors. The many-to-many relationship between movies and actors is facilitated through the `parts` table. Feel free to explore and enhance the application further according to your requirements. Happy film browsing!
+```
+
+You can nowcopy the markdown content above and use it as a README.md file.
