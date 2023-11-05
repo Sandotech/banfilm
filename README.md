@@ -1,6 +1,3 @@
-Sure! Here's the README.md content in markdown format:
-
-```
 # Banfilm - Movie and Actor Library
 
 Banfilm is a Ruby on Rails application that serves as a library for movies and actors. In this application, movies and actors are modeled as separate entities, and there is a many-to-many relationship established between them using a through table called "part."
@@ -20,7 +17,7 @@ To set up the Banfilm application on your local machine, follow these steps:
 1. Clone the Banfilm repository from GitHub:
 
    ```bash
-   git clone https://github.com/your-username/banfilm.git
+   git clone https://github.com/Sandotech/banfilm
    ```
 
 2. Navigate to the project directory:
@@ -152,5 +149,3 @@ By Diego Santos, fullstack developer with ruby on Rails.
 
 Congratulations! You now have a basic understanding of Banfilm, a movie and actor library built with Ruby on Rails. The application allows you to create movies and actors, associate actors with movies, and view detailed information about movies and actors. The many-to-many relationship between movies and actors is facilitated through the `parts` table. Feel free to explore and enhance the application further according to your requirements. Happy film browsing!
 ```
-
-You can nowcopy the markdown content above and use it as a README.md file.
