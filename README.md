@@ -120,4 +120,3 @@ By Diego Santos, fullstack developer with ruby on Rails.
 ## Conclusion
 
 Congratulations! You now have a basic understanding of Banfilm, a movie and actor library built with Ruby on Rails. The application allows you to create movies and actors, associate actors with movies, and view detailed information about movies and actors. The many-to-many relationship between movies and actors is facilitated through the `parts` table. Feel free to explore and enhance the application further according to your requirements. Happy film browsing!
-```
